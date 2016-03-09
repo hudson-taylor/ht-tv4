@@ -10,7 +10,8 @@
     "tv4": "^1.1.12"
   },
   "devDependencies": {
-    "hudson-taylor": "^6.0.0"
+    "hudson-taylor": "^6.0.0",
+    "mocha": "^2.4.5"
   },
   "scripts": {
     "test": "mocha -R spec --bail"

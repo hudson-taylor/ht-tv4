@@ -61,4 +61,48 @@ describe("HT tv4", function() {
 
   });
 
+  describe("document", function() {
+
+    it("should return JSON when fn is called", function() {
+
+      var schema = {
+        items: {
+          type: "string"
+        }
+      }
+
+      var validator = httv4(schema);
+
+      assert.deepEqual(validator.document(), schema);
+
+    });
+
+  });
+
+  describe("generate", function() {
+
+    it("should return a validator", function(done) {
+
+      var schema = {
+        items: {
+          type: "string"
+        }
+      }
+
+      var validator = httv4.generate(schema);
+
+      validator.validate({
+        items: "blah"
+      }, function(err, data) {
+        assert.ifError(err);
+        assert.deepEqual(data, {
+          items: "blah"
+        });
+        done();
+      });
+
+    });
+
+  });
+
 });
