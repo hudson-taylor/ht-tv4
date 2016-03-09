@@ -1,6 +1,6 @@
 {
   "name": "ht-tv4",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Wrapper for TV4 for working with hudson-taylor",
   "main": "lib/index.js",
   "directories": {
